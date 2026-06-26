@@ -6,26 +6,38 @@ const EXPERIENCE = [
     org: "Roblox Platform",
     period: "2023 — Present",
     points: [
-      "Engineered functional interactive gameplay elements using Luau scripting, including event countdown systems and custom player welcome messages.",
-      "Managed game design assets, icon aesthetics, and community engagement features to deliver a cohesive, user-friendly hangout experience.",
+      "Built interactive gameplay systems using Luau scripting, including event triggers, timers, and basic player interaction logic.",
+      "Worked on simple game UI elements and customization features to improve player experience in small-scale projects.",
     ],
   },
+
   {
-    role: "Server Systems & Infrastructure Coordinator",
-    org: "Minecraft Java Edition Environments",
-    period: "2026",
+    role: "Minecraft Server & Gameplay Systems",
+    org: "Java Edition (Private/Public Servers)",
+    period: "2025 — Present",
     points: [
-      "Successfully migrated server network architectures and world database assets across premium game hosting infrastructures manually.",
-      "Designed and optimized complex logistical game automation frameworks utilizing precise conditional logic and redstone mechanics.",
+      "Configured and managed private Minecraft servers with custom worlds and gameplay rules.",
+      "Experimented with redstone systems and command-based automation for gameplay mechanics and events.",
     ],
   },
+
   {
-    role: "Frontend Software Learner",
-    org: "Self-Directed Web Studies",
+    role: "Frontend Developer",
+    org: "Self-Directed Projects",
     period: "2026",
     points: [
-      "Progressed from foundational HTML structural layouts and styling rules directly into core JavaScript automation principles.",
-      "Acquired fundamental knowledge of React components, props, and Vite configuration tools to build modular web application cards.",
+      "Built small React-based UI projects to practice components, props, and state management.",
+      "Improved understanding of responsive layouts using Tailwind CSS and modern frontend workflows.",
+    ],
+  },
+
+  {
+    role: "UI Modification Contributor",
+    org: "QGroundControl (Open-Source App)",
+    period: "2026",
+    points: [
+      "Explored and modified UI layout components in QGroundControl, a cross-platform ground control application.",
+      "Adjusted interface elements to better understand Qt/QML structure and cross-platform UI behavior.",
     ],
   },
 ];

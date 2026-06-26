@@ -49,7 +49,7 @@ export default function Header({ theme, toggleTheme }) {
               Hasnain Amir
             </h1>
             <p className="mt-2 text-lg text-ink/60 dark:text-ink-light/60">
-              Software Development Intern Candidate
+              Software Development Intern
             </p>
           </div>
         </div>

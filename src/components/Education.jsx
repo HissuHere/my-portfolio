@@ -3,7 +3,7 @@ import Section from "./Section";
 const EDUCATION = [
   {
     school: "American Lycetuff School",
-    degree: "Metric",
+    degree: "High/Secondary School",
     period: "2026",
     detail: "Just got promoted in class 10th, Last year of school.",
   },

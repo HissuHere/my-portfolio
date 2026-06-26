@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const LINES = [
   { command: "whoami", output: "Hasnain Amir" },
-  { command: "cat role.txt", output: "Software Development Intern Candidate" },
+  { command: "cat role.txt", output: "Software Development Intern" },
   { command: "cat location.txt", output: "Lahore, Pakistan" },
 ];
 
