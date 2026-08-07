@@ -1,9 +1,17 @@
+import { lazy, Suspense } from "react";
 import { useTheme } from "./hooks/useTheme";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import PrintResume from "./components/PrintResume";
+
+const Scene3D = lazy(() => import("./components/three/Scene"));
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -11,25 +19,34 @@ export default function App() {
   return (
     <div
       className="
-        min-h-screen
-        bg-bg dark:bg-bg-dark
+        site-bg min-h-screen
         text-ink dark:text-ink-light
         transition-colors duration-300
       "
     >
-      <main className="max-w-3xl mx-auto px-6 sm:px-8 py-12 sm:py-16">
-        <Header theme={theme} toggleTheme={toggleTheme} />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
+      <div className="print-hidden">
+        <Suspense fallback={null}>
+          <Scene3D />
+        </Suspense>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-        <footer className="no-print mt-16 pt-8 border-t border-line dark:border-line-dark">
-          <p className="font-mono text-xs text-ink/40 dark:text-ink-light/40">
-            Built with React + Tailwind · Deployed on Vercel
-          </p>
-        </footer>
-      </main>
+        <main className="relative z-10">
+          <Hero />
+
+          <div className="mx-auto max-w-6xl px-6">
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Education />
+            <Contact />
+          </div>
+        </main>
+
+        <Footer />
+      </div>
+
+      <PrintResume />
     </div>
   );
 }
