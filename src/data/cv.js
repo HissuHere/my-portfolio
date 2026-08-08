@@ -14,31 +14,13 @@ export const PERSON = {
   summary:
     "Self-driven full stack developer building with React, Tailwind and the modern frontend stack — with the backend side in active learning. I turn ideas into complete experiences, from responsive UI to live API integrations, and I'm growing into servers, databases and everything in between.",
   funFacts: [
-    "Self-taught — learned by building, breaking and rebuilding",
-    "Designs game systems in Luau and command-block automation in Minecraft",
-    "Exploring open-source: I dig into projects like QGroundControl to see how big apps work",
+    "Still learning JavaScript and the backend — Node.js, Express and databases",
+    "Always trying different things — new tools, ideas and side projects",
+    "Learning to work with a team — collaboration, code reviews and shipping together",
   ],
 };
 
 export const EXPERIENCE = [
-  {
-    role: "Independent Game Developer",
-    org: "Roblox Platform",
-    period: "2023 — Present",
-    points: [
-      "Built interactive gameplay systems using Luau scripting, including event triggers, timers, and basic player interaction logic.",
-      "Worked on simple game UI elements and customization features to improve player experience in small-scale projects.",
-    ],
-  },
-  {
-    role: "Minecraft Server & Gameplay Systems",
-    org: "Java Edition (Private/Public Servers)",
-    period: "2025 — Present",
-    points: [
-      "Configured and managed private Minecraft servers with custom worlds and gameplay rules.",
-      "Experimented with redstone systems and command-based automation for gameplay mechanics and events.",
-    ],
-  },
   {
     role: "Full Stack Developer",
     org: "Self-Directed Projects",
@@ -55,6 +37,24 @@ export const EXPERIENCE = [
     points: [
       "Explored and modified UI layout components in QGroundControl, a cross-platform ground control application.",
       "Adjusted interface elements to better understand Qt/QML structure and cross-platform UI behavior.",
+    ],
+  },
+  {
+    role: "Independent Game Developer",
+    org: "Roblox Platform",
+    period: "2023 — Present",
+    points: [
+      "Built interactive gameplay systems using Luau scripting, including event triggers, timers, and basic player interaction logic.",
+      "Worked on simple game UI elements and customization features to improve player experience in small-scale projects.",
+    ],
+  },
+  {
+    role: "Minecraft Server & Gameplay Systems",
+    org: "Java Edition (Private/Public Servers)",
+    period: "2025 — Present",
+    points: [
+      "Configured and managed private Minecraft servers with custom worlds and gameplay rules.",
+      "Experimented with redstone systems and command-based automation for gameplay mechanics and events.",
     ],
   },
 ];
