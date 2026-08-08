@@ -18,13 +18,11 @@ export default function About() {
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-5 leading-relaxed text-ink/80 dark:text-ink-light/80">
           <p>
-            I got into this through games. I spent hours scripting gameplay
-            systems in <span className="font-mono text-sm">Luau</span> on Roblox
-            and wiring up command blocks in Minecraft, not because I was trying
-            to learn to code, just because I wanted stuff to happen. Somewhere
-            along the way I realised I was actually building logic, state and
-            systems, and it just clicked. I&apos;m still doing that now, just
-            with better tools.
+            I&apos;ve always been into how things work, so I started making
+            random projects: scripting gameplay in{" "}
+            <span className="font-mono text-sm">Luau</span> on Roblox, wiring up
+            command blocks in Minecraft, and seeing what I could build. One
+            project led to another, and now I build for the web with real tools.
           </p>
           <p>
             Right now I&apos;m working at{" "}

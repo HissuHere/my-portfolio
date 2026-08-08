@@ -1,6 +1,6 @@
 import { PERSON } from "../data/cv";
 import Scene3D from "./three/Scene";
-import { MailIcon, XIcon, InstagramIcon, GitHubIcon } from "./icons";
+import { MailIcon, XIcon, InstagramIcon, GitHubIcon, ArrowRightIcon } from "./icons";
 
 export default function Hero() {
   return (
@@ -37,6 +37,33 @@ export default function Hero() {
                 {PERSON.company}
               </a>
             </p>
+
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#projects"
+                className="
+                  group inline-flex items-center gap-2 rounded-md
+                  bg-ink dark:bg-ink-light px-5 py-3
+                  font-mono text-sm text-bg dark:text-bg-dark
+                  hover:opacity-80 transition-opacity
+                "
+              >
+                view projects
+                <ArrowRightIcon size={16} className="transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href="#contact"
+                className="
+                  inline-flex items-center gap-2 rounded-md px-5 py-3
+                  font-mono text-sm border border-line dark:border-line-dark
+                  text-ink/80 dark:text-ink-light/80
+                  hover:border-accent/60 dark:hover:border-accent-dark/60 hover:text-accent dark:hover:text-accent-dark
+                  transition-colors
+                "
+              >
+                contact me
+              </a>
+            </div>
 
             <div className="mt-10 flex items-center gap-3">
               <a
