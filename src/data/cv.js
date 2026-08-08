@@ -1,7 +1,21 @@
+function getAge(birthDate) {
+  const birth = new Date(birthDate);
+  const now = new Date();
+  let age = now.getFullYear() - birth.getFullYear();
+  const hasHadBirthday =
+    now.getMonth() > birth.getMonth() ||
+    (now.getMonth() === birth.getMonth() && now.getDate() >= birth.getDate());
+  if (!hasHadBirthday) age -= 1;
+  return age;
+}
+
 export const PERSON = {
   name: "Hasnain Amir",
   title: "Full Stack Developer",
   location: "Lahore, Pakistan",
+  age: getAge("2010-10-14"),
+  company: "Visor Dynamics",
+  companyUrl: "https://visordynamics.uk",
   email: "hasnainamironly@gmail.com",
   phone: "03236888456",
   phoneTel: "+923236888456",

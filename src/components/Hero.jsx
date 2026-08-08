@@ -27,6 +27,22 @@ export default function Hero() {
           {PERSON.summary}
         </p>
 
+        <p className="mt-4 flex items-center gap-2 text-sm text-ink/60 dark:text-ink-light/60">
+          <span
+            aria-hidden="true"
+            className="inline-block h-1.5 w-1.5 rounded-full bg-accent dark:bg-accent-dark"
+          />
+          currently at{" "}
+          <a
+            href={PERSON.companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-ink/80 dark:text-ink-light/80 hover:text-accent dark:hover:text-accent-dark"
+          >
+            {PERSON.company}
+          </a>
+        </p>
+
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
             href="#projects"

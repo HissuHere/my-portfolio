@@ -19,8 +19,8 @@ export default function About() {
         <div className="space-y-5 leading-relaxed text-ink/80 dark:text-ink-light/80">
           <p>
             Hi, I&apos;m <span className="text-accent dark:text-accent-dark">Hasnain</span> —
-            a self-taught developer based in {PERSON.location}. My journey started
-            in game environments: scripting gameplay systems in{" "}
+            a {PERSON.age}-year-old self-taught developer based in {PERSON.location}. My journey
+            started in game environments: scripting gameplay systems in{" "}
             <span className="font-mono text-sm">Luau</span> on Roblox and automating
             worlds with command blocks in Minecraft. That playground taught me the
             fundamentals of logic, state and systems design before I ever touched a
@@ -34,9 +34,17 @@ export default function About() {
             learning the backend with{" "}
             <span className="font-mono text-sm">Node.js</span>,{" "}
             <span className="font-mono text-sm">Express</span> and databases
-            to work full stack. I also like reading open-source codebases like
-            QGroundControl to understand how real, large-scale applications are
-            structured.
+            to work full stack. I&apos;m currently working at{" "}
+            <a
+              href={PERSON.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent dark:text-accent-dark hover:underline"
+            >
+              {PERSON.company}
+            </a>
+            , and I also like reading open-source codebases like QGroundControl
+            to understand how real, large-scale applications are structured.
           </p>
           <p>
             I&apos;m at my best when I&apos;m building things I&apos;m curious
