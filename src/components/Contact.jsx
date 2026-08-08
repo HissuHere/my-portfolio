@@ -28,8 +28,9 @@ export default function Contact() {
         </h3>
 
         <p className="mx-auto mt-4 max-w-md text-ink/70 dark:text-ink-light/70">
-          I&apos;m always happy to talk frontend, games, or tech in general.
-          If you want to collaborate — or just say hi — my inbox is open.
+          I&apos;m always happy to talk frontend, backend, games, or tech in
+          general. If you want to collaborate — or just say hi — my inbox is
+          open.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -87,8 +88,7 @@ export default function Contact() {
               transition-colors
             "
           >
-            <InstagramIcon size={16} />
-            @{PERSON.instagramHandle}
+            <InstagramIcon size={16} />@{PERSON.instagramHandle}
           </a>
           <a
             href={`tel:${PERSON.phoneTel}`}
