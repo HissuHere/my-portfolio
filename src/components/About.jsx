@@ -16,7 +16,7 @@ export default function About() {
       subtitle="A quick look at who I am and what I care about."
     >
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
-        <div className="space-y-5 text-ink/80 dark:text-ink-light/80 leading-relaxed">
+        <div className="space-y-5 leading-relaxed text-ink/80 dark:text-ink-light/80">
           <p>
             Hi, I&apos;m <span className="text-accent dark:text-accent-dark">Hasnain</span> —
             a self-taught developer based in {PERSON.location}. My journey started
@@ -27,26 +27,30 @@ export default function About() {
             formal IDE.
           </p>
           <p>
-            Today I focus on the modern frontend —{" "}
+            Today I build on the modern frontend —{" "}
             <span className="font-mono text-sm">React</span>,{" "}
             <span className="font-mono text-sm">Tailwind CSS</span> and{" "}
-            <span className="font-mono text-sm">Vite</span> — turning ideas into
-            responsive, interactive interfaces. I also like reading open-source
-            codebases like QGroundControl to understand how real, large-scale
-            applications are structured.
+            <span className="font-mono text-sm">Vite</span> — and I&apos;m
+            learning the backend with{" "}
+            <span className="font-mono text-sm">Node.js</span>,{" "}
+            <span className="font-mono text-sm">Express</span> and databases
+            to work full stack. I also like reading open-source codebases like
+            QGroundControl to understand how real, large-scale applications are
+            structured.
           </p>
           <p>
-            I&apos;m currently looking for a{" "}
-            <span className="text-accent dark:text-accent-dark">Software Development
-            Internship</span> where I can learn fast, contribute real work, and level
-            up alongside a strong team.
+            I&apos;m at my best when I&apos;m building things I&apos;m curious
+            about — a new component, a small game mechanic, or digging through
+            how real, large-scale applications are put together. I care about
+            clean code, honest design, and shipping interfaces that feel good
+            to use.
           </p>
         </div>
 
         <div className="space-y-4">
-          <div className="glass rounded-xl p-6">
-            <h3 className="mb-3 font-mono text-xs uppercase tracking-widest text-accent dark:text-accent-dark">
-              // current focus
+          <div className="card card-hover rounded-xl p-6">
+            <h3 className="mb-3 font-mono text-xs uppercase tracking-widest text-ink/50 dark:text-ink-light/50">
+              current focus
             </h3>
             <ul className="space-y-2 text-sm text-ink/80 dark:text-ink-light/80">
               {PERSON.funFacts.map((fact) => (
@@ -60,11 +64,8 @@ export default function About() {
 
           <div className="grid grid-cols-3 gap-3">
             {STATS.map((stat) => (
-              <div
-                key={stat.label}
-                className="glass rounded-xl p-4 text-center"
-              >
-                <p className="font-display text-2xl font-bold text-accent dark:text-accent-dark text-glow">
+              <div key={stat.label} className="card rounded-xl p-4 text-center">
+                <p className="font-display text-2xl font-bold text-ink dark:text-ink-light">
                   {stat.value}
                 </p>
                 <p className="mt-1 text-[11px] leading-tight text-ink/60 dark:text-ink-light/60">

@@ -16,14 +16,13 @@ export default function Section({
       ref={ref}
       className={`reveal ${isVisible ? "is-visible" : ""} scroll-mt-24 py-20 ${className}`}
     >
-      <div className="mb-10 flex items-center gap-4">
-        <span className="font-mono text-sm text-accent dark:text-accent-dark">
+      <div className="mb-10 flex items-baseline gap-4">
+        <span className="font-mono text-sm text-ink/40 dark:text-ink-light/40">
           {index}.
         </span>
-        <h2 className="section-label font-mono text-xl uppercase tracking-widest text-ink dark:text-ink-light">
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink dark:text-ink-light">
           {title}
         </h2>
-        <span className="hidden h-px flex-1 bg-line dark:bg-line-dark sm:block" />
       </div>
 
       {subtitle && (

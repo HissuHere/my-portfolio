@@ -28,6 +28,7 @@ export default function PrintResume() {
             <p>{PERSON.email}</p>
             <p>{PERSON.phone}</p>
             <p>{PERSON.xHandle} · @{PERSON.instagramHandle}</p>
+            <p>github.com/{PERSON.githubHandle}</p>
           </div>
         </header>
 

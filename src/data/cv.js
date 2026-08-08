@@ -1,6 +1,6 @@
 export const PERSON = {
   name: "Hasnain Amir",
-  title: "Software Development Intern",
+  title: "Full Stack Developer",
   location: "Lahore, Pakistan",
   email: "hasnainamironly@gmail.com",
   phone: "03236888456",
@@ -9,8 +9,10 @@ export const PERSON = {
   instagramHandle: "hissuhere",
   x: "https://x.com/Hasnain28833841",
   xHandle: "@Hasnain28833841",
+  github: "https://github.com/HissuHere",
+  githubHandle: "HissuHere",
   summary:
-    "Self-driven developer building with React, Tailwind and the modern frontend stack. I turn ideas into responsive, interactive experiences — from gameplay systems to production-style UI.",
+    "Self-driven full stack developer building with React, Tailwind and the modern frontend stack — with the backend side in active learning. I turn ideas into complete experiences, from responsive UI to live API integrations, and I'm growing into servers, databases and everything in between.",
   funFacts: [
     "Self-taught — learned by building, breaking and rebuilding",
     "Designs game systems in Luau and command-block automation in Minecraft",
@@ -38,12 +40,12 @@ export const EXPERIENCE = [
     ],
   },
   {
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     org: "Self-Directed Projects",
     period: "2026",
     points: [
-      "Built small React-based UI projects to practice components, props, and state management.",
-      "Improved understanding of responsive layouts using Tailwind CSS and modern frontend workflows.",
+      "Built React-based frontends to practice components, props, state management and live API integration.",
+      "Learning the backend with Node.js, Express and databases — working toward complete full stack projects.",
     ],
   },
   {
@@ -72,15 +74,16 @@ export const PROJECTS = [
       "This portfolio itself, built using React and Tailwind CSS. Designed to practice layout design, component structuring, and responsive UI development.",
     stack: ["React", "Vite", "Tailwind CSS"],
     highlight: "UI Layout + Responsive Design",
-    accent: "accent2",
+    accent: "accent",
   },
   {
-    name: "Terminal Hero",
+    name: "Weatherly — Live Weather App",
     description:
-      "An animated terminal-style introduction that types out commands on load — built to practice effects, timing and accessibility with reduced-motion support.",
-    stack: ["React", "CSS Keyframes"],
-    highlight: "Micro-interaction",
-    accent: "magenta",
+      "A live weather app that searches any city and shows current conditions plus a 7-day forecast. Fetches real data from the free Open-Meteo API with debounced search, autocomplete suggestions, and clean loading/error states.",
+    stack: ["React", "Open-Meteo API", "fetch / async", "CSS"],
+    highlight: "API Integration",
+    accent: "accent",
+    link: "https://weather-app-hissu.vercel.app",
   },
 ];
 
@@ -145,19 +148,19 @@ export const SKILL_GROUPS = [
     ],
   },
   {
-    category: "Learning Focus",
+    category: "Backend · Learning",
     items: [
       {
-        name: "React patterns",
-        desc: "Composition, custom hooks and cleaner ways to manage state.",
+        name: "Node.js",
+        desc: "Servers, modules and npm-powered tooling — the backend side of my full stack track.",
       },
       {
-        name: "Node.js basics",
-        desc: "The backend side — servers, modules and npm-powered tooling.",
+        name: "Express & REST APIs",
+        desc: "Building API routes and serving JSON — learning by making backends for my frontends.",
       },
       {
-        name: "API integration",
-        desc: "Fetching and wiring real data into frontend apps.",
+        name: "Databases",
+        desc: "Modeling and querying data with SQL and MongoDB — the persistence layer of full stack apps.",
       },
     ],
   },

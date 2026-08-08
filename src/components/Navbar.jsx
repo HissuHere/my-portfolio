@@ -26,7 +26,7 @@ export default function Navbar({ theme, toggleTheme }) {
       className={`
         print-hidden fixed inset-x-0 top-0 z-50 transition-all duration-300
         ${scrolled || open
-          ? "bg-bg/80 dark:bg-bg-dark/80 backdrop-blur-xl border-b border-line/70 dark:border-line-dark/70"
+          ? "bg-bg/90 dark:bg-bg-dark/90 backdrop-blur-md border-b border-line/70 dark:border-line-dark/70"
           : "bg-transparent border-b border-transparent"}
       `}
     >
@@ -34,10 +34,10 @@ export default function Navbar({ theme, toggleTheme }) {
         <a
           href="#top"
           onClick={() => setOpen(false)}
-          className="font-mono text-sm text-ink dark:text-ink-light"
+          className="font-display text-lg font-semibold text-ink dark:text-ink-light"
         >
-          <span className="text-accent dark:text-accent-dark">~/</span>
           {PERSON.name.toLowerCase().split(" ")[0]}
+          <span className="text-accent dark:text-accent-dark">.</span>
         </a>
 
         <div className="hidden items-center gap-7 md:flex">
@@ -48,7 +48,7 @@ export default function Navbar({ theme, toggleTheme }) {
                   href={link.href}
                   className="group font-mono text-[13px] text-ink/70 dark:text-ink-light/70 transition-colors hover:text-accent dark:hover:text-accent-dark"
                 >
-                  <span className="mr-1 text-accent/70 dark:text-accent-dark/70">
+                  <span className="mr-1 text-ink/40 dark:text-ink-light/40">
                     {link.index}.
                   </span>
                   {link.label}
@@ -63,10 +63,9 @@ export default function Navbar({ theme, toggleTheme }) {
               onClick={() => window.print()}
               className="
                 inline-flex items-center gap-2 font-mono text-xs px-3.5 py-2 rounded-md
-                bg-accent dark:bg-accent-dark
-                text-white dark:text-ink
-                hover:shadow-glow
-                transition-all duration-200
+                bg-ink text-bg dark:bg-ink-light dark:text-bg-dark
+                hover:opacity-80
+                transition-opacity duration-200
                 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-dark
               "
             >
@@ -103,7 +102,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 py-2 font-mono text-sm text-ink/80 dark:text-ink-light/80"
               >
-                <span className="text-accent/70 dark:text-accent-dark/70">
+                <span className="text-ink/40 dark:text-ink-light/40">
                   {link.index}.
                 </span>
                 {link.label}
@@ -114,7 +113,7 @@ export default function Navbar({ theme, toggleTheme }) {
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             <button
               onClick={() => window.print()}
-              className="flex-1 inline-flex items-center justify-center gap-2 font-mono text-xs px-3.5 py-2 rounded-md bg-accent dark:bg-accent-dark text-white dark:text-ink"
+              className="flex-1 inline-flex items-center justify-center gap-2 font-mono text-xs px-3.5 py-2 rounded-md bg-ink text-bg dark:bg-ink-light dark:text-bg-dark"
             >
               <DownloadIcon size={14} />
               download CV

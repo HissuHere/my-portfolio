@@ -1,6 +1,5 @@
 import { Suspense, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Sparkles, Stars } from "@react-three/drei";
 
 const reduceMotion =
   typeof window !== "undefined" &&
@@ -13,10 +12,12 @@ function getScrollProgress() {
   return max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
 }
 
-/* One smooth metallic torus knot + a single thin orbit ring. */
+/* Silver metallic torus knot + one thin orbit ring + a faint wireframe
+   companion. Quiet, monochrome, mostly stationary. */
 function CoreObject() {
   const core = useRef(null);
   const ring = useRef(null);
+  const wire = useRef(null);
 
   const yRef = useRef(0);
   const xRef = useRef(0);
@@ -25,9 +26,9 @@ function CoreObject() {
     const t = reduceMotion ? 0 : state.clock.elapsedTime;
     const progress = getScrollProgress();
 
-    const targetY = progress * Math.PI * 3 + Math.sin(t * 0.2) * 0.15;
-    const targetX = progress * Math.PI * 0.4;
-    const ease = Math.min(1, delta * 5);
+    const targetY = progress * Math.PI * 3 + Math.sin(t * 0.2) * 0.08;
+    const targetX = progress * Math.PI * 0.35;
+    const ease = Math.min(1, delta * 4);
 
     yRef.current += (targetY - yRef.current) * ease;
     xRef.current += (targetX - xRef.current) * ease;
@@ -35,29 +36,42 @@ function CoreObject() {
     if (core.current) {
       core.current.rotation.y = yRef.current;
       core.current.rotation.x = xRef.current;
-      core.current.rotation.z = 0.45 + Math.sin(t * 0.25) * 0.15;
+      core.current.rotation.z = 0.35 + Math.sin(t * 0.25) * 0.06;
     }
     if (ring.current) {
-      ring.current.rotation.z = progress * Math.PI * 1.5 + t * 0.12;
+      ring.current.rotation.z = progress * Math.PI * 1.2 + t * 0.06;
+    }
+    if (wire.current) {
+      wire.current.rotation.y = t * 0.12;
+      wire.current.rotation.x = t * 0.08;
+      wire.current.position.y = Math.sin(t * 0.4) * 0.2;
     }
   });
 
   return (
     <group>
       <mesh ref={core}>
-        <torusKnotGeometry args={[1, 0.32, 160, 24]} />
+        <torusKnotGeometry args={[1, 0.32, 140, 20]} />
         <meshStandardMaterial
-          color="#0E7490"
-          emissive="#22D3EE"
-          emissiveIntensity={0.32}
-          metalness={0.9}
-          roughness={0.2}
+          color="#f1f1f3"
+          metalness={0.95}
+          roughness={0.18}
         />
       </mesh>
 
       <mesh ref={ring} rotation={[Math.PI / 2.4, 0, 0]}>
-        <torusGeometry args={[2.3, 0.012, 8, 128]} />
-        <meshBasicMaterial color="#22D3EE" transparent opacity={0.55} />
+        <torusGeometry args={[2.2, 0.008, 8, 128]} />
+        <meshBasicMaterial color="#b8b8c0" transparent opacity={0.5} />
+      </mesh>
+
+      <mesh ref={wire} position={[2.4, 0.6, 0.4]}>
+        <icosahedronGeometry args={[0.4, 1]} />
+        <meshStandardMaterial
+          color="#a9a9b2"
+          wireframe
+          transparent
+          opacity={0.7}
+        />
       </mesh>
     </group>
   );
@@ -68,45 +82,27 @@ function SceneContents() {
   const groupRef = useRef(null);
 
   const groupPosition = useMemo(() => {
-    const x = Math.min(viewport.width * 0.22, 2.2);
+    const x = Math.min(viewport.width * 0.26, 2.4);
     return [x, 0, -1.5];
   }, [viewport.width]);
 
-  /* subtle parallax drift as the user scrolls */
+  /* gentle parallax drift as the user scrolls */
   useFrame(() => {
     if (!groupRef.current) return;
     const progress = getScrollProgress();
-    groupRef.current.position.y = -progress * 1.8;
+    groupRef.current.position.y = -progress * 1.5;
   });
 
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[5, 5, 5]} intensity={0.6} color="#ffffff" />
-      <pointLight position={[-4, -2, 3]} intensity={1.4} color="#22D3EE" />
-
-      <Stars
-        radius={50}
-        depth={30}
-        count={700}
-        factor={3}
-        saturation={0}
-        fade
-        speed={0.5}
-      />
+      <ambientLight intensity={0.55} />
+      <directionalLight position={[5, 5, 5]} intensity={1.1} color="#ffffff" />
+      <directionalLight position={[-5, 3, 5]} intensity={0.45} color="#ffffff" />
+      <pointLight position={[-3, -2, 4]} intensity={0.5} color="#cfd0ff" />
 
       <group ref={groupRef} position={groupPosition}>
         <CoreObject />
       </group>
-
-      <Sparkles
-        count={40}
-        scale={[12, 7, 7]}
-        size={1.8}
-        speed={0.25}
-        opacity={0.4}
-        color="#7dd3fc"
-      />
     </>
   );
 }
