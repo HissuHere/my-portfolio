@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      index="06"
+      index="05"
       title="Contact"
       subtitle="Got a project in mind, or just want to say hi?"
     >
@@ -29,7 +29,7 @@ export default function Contact() {
 
         <p className="mx-auto mt-4 max-w-md text-ink/70 dark:text-ink-light/70">
           I&apos;m always happy to talk frontend, backend, games, or tech in
-          general. If you want to collaborate — or just say hi — my inbox is
+          general. If you want to collaborate or just say hi, my inbox is
           open.
         </p>
 

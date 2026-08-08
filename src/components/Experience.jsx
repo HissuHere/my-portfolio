@@ -7,7 +7,7 @@ export default function Experience() {
       id="experience"
       index="02"
       title="Experience"
-      subtitle="Projects, platforms and open-source work where I've built real things."
+      subtitle="Where I've spent time building real things."
     >
       <div className="relative space-y-6">
         <span className="absolute left-[7px] top-2 bottom-2 w-px bg-line dark:bg-line-dark" />

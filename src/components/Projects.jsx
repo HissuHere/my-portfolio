@@ -7,7 +7,7 @@ export default function Projects() {
       id="projects"
       index="03"
       title="Projects"
-      subtitle="A few things I've designed and built."
+      subtitle="A few things I've made while learning."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((project, i) => (

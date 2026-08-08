@@ -1,10 +1,4 @@
-import {
-  PERSON,
-  EXPERIENCE,
-  PROJECTS,
-  SKILL_GROUPS,
-  EDUCATION,
-} from "../data/cv";
+import { PERSON, EXPERIENCE, PROJECTS, SKILL_GROUPS } from "../data/cv";
 
 /**
  * PrintResume
@@ -50,7 +44,7 @@ export default function PrintResume() {
               <div key={i}>
                 <div className="flex items-baseline justify-between gap-2">
                   <p className="text-[11px] font-semibold">
-                    {job.role} — <span className="font-normal">{job.org}</span>
+                    {job.role} at <span className="font-normal">{job.org}</span>
                   </p>
                   <span className="shrink-0 font-mono text-[8.5px]">
                     {job.period}
@@ -101,23 +95,6 @@ export default function PrintResume() {
               </p>
             ))}
           </div>
-        </section>
-
-        {/* education */}
-        <section>
-          <h2 className="mb-1.5 border-b border-[#0B1220] pb-0.5 text-[10px] font-bold uppercase tracking-widest">
-            Education
-          </h2>
-          {EDUCATION.map((edu, i) => (
-            <div key={i} className="flex items-baseline justify-between gap-2">
-              <p className="text-[11px] font-semibold">
-                {edu.school} — <span className="font-normal">{edu.degree}</span>
-              </p>
-              <span className="shrink-0 font-mono text-[8.5px]">
-                {edu.period}
-              </span>
-            </div>
-          ))}
         </section>
 
         <footer className="pt-1 text-center font-mono text-[8px] text-[#555]">

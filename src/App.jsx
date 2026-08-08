@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { useState } from "react";
 import { useTheme } from "./hooks/useTheme";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -6,12 +6,9 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import PrintResume from "./components/PrintResume";
-
-const Scene3D = lazy(() => import("./components/three/Scene"));
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -25,9 +22,6 @@ export default function App() {
       "
     >
       <div className="print-hidden">
-        <Suspense fallback={null}>
-          <Scene3D />
-        </Suspense>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
 
         <main className="relative z-10">
@@ -38,7 +32,6 @@ export default function App() {
             <Experience />
             <Projects />
             <Skills />
-            <Education />
             <Contact />
           </div>
         </main>

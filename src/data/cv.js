@@ -26,11 +26,11 @@ export const PERSON = {
   github: "https://github.com/HissuHere",
   githubHandle: "HissuHere",
   summary:
-    "Self-driven full stack developer building with React, Tailwind and the modern frontend stack — with the backend side in active learning. I turn ideas into complete experiences, from responsive UI to live API integrations, and I'm growing into servers, databases and everything in between.",
+    "15-year-old developer who started out scripting games in Roblox and Minecraft and just kept going. I build with React and Tailwind on the frontend, I'm learning Node and databases for the backend, and I mostly ship whatever I'm curious about.",
   funFacts: [
-    "Still learning JavaScript and the backend — Node.js, Express and databases",
-    "Always trying different things — new tools, ideas and side projects",
-    "Learning to work with a team — collaboration, code reviews and shipping together",
+    "Still learning JavaScript and the backend (Node, Express and databases)",
+    "Always experimenting with new tools, side projects, whatever looks fun",
+    "Working with a team and shipping real stuff",
   ],
 };
 
@@ -41,7 +41,7 @@ export const EXPERIENCE = [
     period: "2026",
     points: [
       "Built React-based frontends to practice components, props, state management and live API integration.",
-      "Learning the backend with Node.js, Express and databases — working toward complete full stack projects.",
+      "Learning the backend with Node.js, Express and databases, working toward complete full stack projects.",
     ],
   },
   {
@@ -56,7 +56,7 @@ export const EXPERIENCE = [
   {
     role: "Independent Game Developer",
     org: "Roblox Platform",
-    period: "2023 — Present",
+    period: "2023 - Present",
     points: [
       "Built interactive gameplay systems using Luau scripting, including event triggers, timers, and basic player interaction logic.",
       "Worked on simple game UI elements and customization features to improve player experience in small-scale projects.",
@@ -65,7 +65,7 @@ export const EXPERIENCE = [
   {
     role: "Minecraft Server & Gameplay Systems",
     org: "Java Edition (Private/Public Servers)",
-    period: "2025 — Present",
+    period: "2025 - Present",
     points: [
       "Configured and managed private Minecraft servers with custom worlds and gameplay rules.",
       "Experimented with redstone systems and command-based automation for gameplay mechanics and events.",
@@ -74,6 +74,15 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = [
+  {
+    name: "Weatherly",
+    description:
+      "A live weather app that searches any city and shows current conditions plus a 7-day forecast. Fetches real data from the free Open-Meteo API with debounced search, autocomplete suggestions, and clean loading/error states.",
+    stack: ["React", "Open-Meteo API", "fetch / async", "CSS"],
+    highlight: "API Integration",
+    accent: "accent",
+    link: "https://weather-app-hissu.vercel.app",
+  },
   {
     name: "Rating Page",
     description:
@@ -90,15 +99,6 @@ export const PROJECTS = [
     highlight: "UI Layout + Responsive Design",
     accent: "accent",
   },
-  {
-    name: "Weatherly — Live Weather App",
-    description:
-      "A live weather app that searches any city and shows current conditions plus a 7-day forecast. Fetches real data from the free Open-Meteo API with debounced search, autocomplete suggestions, and clean loading/error states.",
-    stack: ["React", "Open-Meteo API", "fetch / async", "CSS"],
-    highlight: "API Integration",
-    accent: "accent",
-    link: "https://weather-app-hissu.vercel.app",
-  },
 ];
 
 export const SKILL_GROUPS = [
@@ -107,7 +107,7 @@ export const SKILL_GROUPS = [
     items: [
       {
         name: "HTML5",
-        desc: "Semantic, accessible markup — structure that makes sense to browsers, screen readers and maintainers.",
+        desc: "Semantic, accessible markup, structure that makes sense to browsers, screen readers and maintainers.",
       },
       {
         name: "CSS3",
@@ -119,7 +119,7 @@ export const SKILL_GROUPS = [
       },
       {
         name: "React",
-        desc: "Components, props, hooks and state — building reusable, composable UI with the component model.",
+        desc: "Components, props, hooks and state, building reusable, composable UI with the component model.",
       },
     ],
   },
@@ -145,11 +145,11 @@ export const SKILL_GROUPS = [
     items: [
       {
         name: "Git & GitHub",
-        desc: "Commits, branches and pull requests — version control for solo and collaborative work.",
+        desc: "Commits, branches and pull requests, version control for solo and collaborative work.",
       },
       {
         name: "VS Code",
-        desc: "Daily driver editor — shortcuts, extensions and a clean setup.",
+        desc: "Daily driver editor, with shortcuts, extensions and a clean setup.",
       },
       {
         name: "Vite",
@@ -166,26 +166,17 @@ export const SKILL_GROUPS = [
     items: [
       {
         name: "Node.js",
-        desc: "Servers, modules and npm-powered tooling — the backend side of my full stack track.",
+        desc: "Servers, modules and npm-powered tooling, the backend side of my full stack track.",
       },
       {
         name: "Express & REST APIs",
-        desc: "Building API routes and serving JSON — learning by making backends for my frontends.",
+        desc: "Building API routes and serving JSON, learning by making backends for my frontends.",
       },
       {
         name: "Databases",
-        desc: "Modeling and querying data with SQL and MongoDB — the persistence layer of full stack apps.",
+        desc: "Modeling and querying data with SQL and MongoDB, the persistence layer of full stack apps.",
       },
     ],
-  },
-];
-
-export const EDUCATION = [
-  {
-    school: "American Lycetuff School",
-    degree: "High/Secondary School",
-    period: "2026",
-    detail: "Just got promoted in class 10th — last year of school.",
   },
 ];
 
@@ -194,6 +185,5 @@ export const NAV_LINKS = [
   { label: "experience", href: "#experience", index: "02" },
   { label: "projects", href: "#projects", index: "03" },
   { label: "skills", href: "#skills", index: "04" },
-  { label: "education", href: "#education", index: "05" },
-  { label: "contact", href: "#contact", index: "06" },
+  { label: "contact", href: "#contact", index: "05" },
 ];

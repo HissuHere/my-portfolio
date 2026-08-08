@@ -1,5 +1,5 @@
-import { Suspense, useMemo, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 const reduceMotion =
   typeof window !== "undefined" &&
@@ -78,19 +78,13 @@ function CoreObject() {
 }
 
 function SceneContents() {
-  const { viewport } = useThree();
   const groupRef = useRef(null);
 
-  const groupPosition = useMemo(() => {
-    const x = Math.min(viewport.width * 0.26, 2.4);
-    return [x, 0, -1.5];
-  }, [viewport.width]);
-
-  /* gentle parallax drift as the user scrolls */
+  /* gentle tilt as the page scrolls */
   useFrame(() => {
     if (!groupRef.current) return;
     const progress = getScrollProgress();
-    groupRef.current.position.y = -progress * 1.5;
+    groupRef.current.rotation.z = progress * Math.PI * 0.15;
   });
 
   return (
@@ -100,7 +94,7 @@ function SceneContents() {
       <directionalLight position={[-5, 3, 5]} intensity={0.45} color="#ffffff" />
       <pointLight position={[-3, -2, 4]} intensity={0.5} color="#cfd0ff" />
 
-      <group ref={groupRef} position={groupPosition}>
+      <group ref={groupRef} position={[0, 0, 0]} scale={0.9}>
         <CoreObject />
       </group>
     </>
@@ -109,7 +103,7 @@ function SceneContents() {
 
 export default function Scene3D() {
   return (
-    <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 7], fov: 45 }}
         dpr={[1, 1.6]}
