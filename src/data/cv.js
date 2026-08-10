@@ -162,19 +162,20 @@ export const SKILL_GROUPS = [
     ],
   },
   {
-    category: "Backend · Learning",
+    category: "Backend · Currently Learning",
+    learning: true,
     items: [
       {
         name: "Node.js",
-        desc: "Servers, modules and npm-powered tooling, the backend side of my full stack track.",
+        desc: "Learning servers, modules and npm tooling, the backend half of my full stack track.",
       },
       {
         name: "Express & REST APIs",
-        desc: "Building API routes and serving JSON, learning by making backends for my frontends.",
+        desc: "Learning to build API routes and serve JSON, making backends for my frontends.",
       },
       {
         name: "Databases",
-        desc: "Modeling and querying data with SQL and MongoDB, the persistence layer of full stack apps.",
+        desc: "Learning SQL and MongoDB, modeling and querying the persistence layer of real apps.",
       },
     ],
   },

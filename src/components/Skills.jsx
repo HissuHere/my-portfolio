@@ -11,9 +11,22 @@ export default function Skills() {
     >
       <div className="grid gap-6 sm:grid-cols-2">
         {SKILL_GROUPS.map((group, i) => (
-          <div key={i} className="card card-hover rounded-xl p-6">
+          <div
+            key={i}
+            className={`card card-hover rounded-xl p-6 ${
+              group.learning
+                ? "border-accent/50 dark:border-accent-dark/50"
+                : ""
+            }`}
+          >
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="font-mono text-xs uppercase tracking-widest text-ink/50 dark:text-ink-light/50">
+              <h3
+                className={`font-mono text-xs uppercase tracking-widest ${
+                  group.learning
+                    ? "text-accent dark:text-accent-dark"
+                    : "text-ink/50 dark:text-ink-light/50"
+                }`}
+              >
                 {group.category}
               </h3>
               <span className="font-mono text-xs text-ink/30 dark:text-ink-light/30">

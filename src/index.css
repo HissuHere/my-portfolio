@@ -70,9 +70,23 @@ body {
 /* ===== ambient page background ===== */
 .site-bg {
   background-color: #fafafb;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(10, 10, 11, 0.14) 1.2px, transparent 1.5px),
+    radial-gradient(ellipse 55% 38% at 50% -4%, rgba(79, 70, 229, 0.10), transparent 70%);
+  background-size: 26px 26px, 100% 100%;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 .dark .site-bg {
   background-color: #09090b;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(237, 237, 239, 0.14) 1.2px, transparent 1.5px),
+    radial-gradient(ellipse 55% 38% at 50% -4%, rgba(129, 140, 248, 0.12), transparent 70%);
+  background-size: 26px 26px, 100% 100%;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 
 /* Reveal-on-scroll utility: starts hidden, animation class added by JS hook */
