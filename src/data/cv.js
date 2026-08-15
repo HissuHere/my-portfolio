@@ -84,19 +84,26 @@ export const PROJECTS = [
     link: "https://weather-app-hissu.vercel.app",
   },
   {
+    name: "Sesh",
+    description:
+      "A real-time party web app built around one shared room: a 5-character code, a live player list, room-wide chat, and mini-games like Tic-Tac-Toe and Connect Four that drop into the room. You join, grab a seat, and play head-to-head against friends, or a CPU, with live queues and winner-stays rotation so everyone keeps getting a turn.",
+    stack: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "Supabase (Postgres + Realtime)",
+    ],
+    highlight: "Fully synced multiplayer",
+    accent: "accent",
+    link: "https://seshgame.vercel.app",
+  },
+  {
     name: "Rating Page",
     description:
       "A simple interactive rating component built with React. Focused on understanding state management, user input handling, and conditional UI rendering.",
     stack: ["React", "useState", "Tailwind CSS"],
     highlight: "First React UI Logic Project",
-    accent: "accent",
-  },
-  {
-    name: "Portfolio Website",
-    description:
-      "This portfolio itself, built using React and Tailwind CSS. Designed to practice layout design, component structuring, and responsive UI development.",
-    stack: ["React", "Vite", "Tailwind CSS"],
-    highlight: "UI Layout + Responsive Design",
     accent: "accent",
   },
 ];
