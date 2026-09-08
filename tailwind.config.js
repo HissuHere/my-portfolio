@@ -28,8 +28,17 @@ export default {
       },
       fontFamily: {
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+        light: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
       },
       boxShadow: {
         card: "0 1px 2px rgba(0,0,0,0.04)",

@@ -18,14 +18,13 @@ export default function About() {
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-5 leading-relaxed text-ink/80 dark:text-ink-light/80">
           <p>
-            I&apos;ve always been into how things work, so I started making
-            random projects: scripting gameplay in{" "}
-            <span className="font-mono text-sm">Luau</span> on Roblox, wiring up
-            command blocks in Minecraft, and seeing what I could build. One
-            project led to another, and now I build for the web with real tools.
+            I got into code by making games, scripting gameplay in{" "}
+            <span className="font-mono text-sm">Luau</span> on Roblox and messing
+            with command blocks in Minecraft. One project led to another, and now
+            I build for the web.
           </p>
           <p>
-            Right now I&apos;m working at{" "}
+            These days I&apos;m interning at{" "}
             <a
               href={PERSON.companyUrl}
               target="_blank"
@@ -34,21 +33,17 @@ export default function About() {
             >
               {PERSON.company}
             </a>
-            , getting real experience on real projects. On my own time I build
-            with <span className="font-mono text-sm">React</span>,{" "}
-            <span className="font-mono text-sm">Tailwind CSS</span> and{" "}
-            <span className="font-mono text-sm">Vite</span>, and I&apos;m
-            learning the backend, <span className="font-mono text-sm">Node.js</span>,
-            {" "}<span className="font-mono text-sm">Express</span> and databases,
-            so I can go full stack. I also like digging into big open-source
-            codebases like QGroundControl just to see how real apps are put
-            together.
+            , where I&apos;m getting real experience on real projects. I build
+            with <span className="font-mono text-sm">React</span> and{" "}
+            <span className="font-mono text-sm">Tailwind</span>, and I&apos;m
+            learning <span className="font-mono text-sm">Node.js</span> and
+            databases to go full stack. Most of my learning comes from just
+            starting projects and figuring them out along the way.
           </p>
           <p>
-            Outside of code I&apos;m at the gym, playing games, or
-            experimenting with something new. I&apos;m {PERSON.age} and still in
-            school, but I take this seriously, and I build something almost
-            every day.
+            Outside of code I&apos;m at the gym, gaming, or trying out something
+            new. I&apos;m {PERSON.age}, still in school, and I build something
+            almost every day.
           </p>
         </div>
 

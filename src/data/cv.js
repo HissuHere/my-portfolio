@@ -21,8 +21,8 @@ export const PERSON = {
   phoneTel: "+923236888456",
   instagram: "https://instagram.com/hissuhere",
   instagramHandle: "hissuhere",
-  x: "https://x.com/Hasnain28833841",
-  xHandle: "@Hasnain28833841",
+  x: "https://x.com/hasnainirl",
+  xHandle: "@hasnainirl",
   github: "https://github.com/HissuHere",
   githubHandle: "HissuHere",
   summary:
@@ -36,21 +36,25 @@ export const PERSON = {
 
 export const EXPERIENCE = [
   {
+    role: "Full Stack Developer Intern",
+    org: "Visor Dynamics",
+    orgUrl: "https://visordynamics.uk",
+    period: "July 2026 - Present",
+    badge: "My first internship",
+    featured: true,
+    points: [
+      "Doing my first internship as a full stack developer intern and learning what it takes to ship real work.",
+      "Working on production features with the team, getting real code reviews and real deadlines instead of toy projects.",
+      "Learning how professional workflows run day to day, from proper version control to code reviews and shipping as a team.",
+    ],
+  },
+  {
     role: "Full Stack Developer",
     org: "Self-Directed Projects",
     period: "2026",
     points: [
       "Built React-based frontends to practice components, props, state management and live API integration.",
       "Learning the backend with Node.js, Express and databases, working toward complete full stack projects.",
-    ],
-  },
-  {
-    role: "UI Modification Contributor",
-    org: "QGroundControl (Open-Source App)",
-    period: "2026",
-    points: [
-      "Explored and modified UI layout components in QGroundControl, a cross-platform ground control application.",
-      "Adjusted interface elements to better understand Qt/QML structure and cross-platform UI behavior.",
     ],
   },
   {
@@ -81,6 +85,7 @@ export const PROJECTS = [
     stack: ["React", "Open-Meteo API", "fetch / async", "CSS"],
     highlight: "API Integration",
     accent: "accent",
+    image: "/projects/weatherly.png",
     link: "https://weather-app-hissu.vercel.app",
   },
   {
@@ -96,15 +101,8 @@ export const PROJECTS = [
     ],
     highlight: "Fully synced multiplayer",
     accent: "accent",
+    image: "/projects/sesh.png",
     link: "https://seshgame.vercel.app",
-  },
-  {
-    name: "Rating Page",
-    description:
-      "A simple interactive rating component built with React. Focused on understanding state management, user input handling, and conditional UI rendering.",
-    stack: ["React", "useState", "Tailwind CSS"],
-    highlight: "First React UI Logic Project",
-    accent: "accent",
   },
 ];
 
