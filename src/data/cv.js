@@ -58,6 +58,15 @@ export const EXPERIENCE = [
     ],
   },
   {
+    role: "UI Modification Contributor",
+    org: "QGroundControl (Open-Source App)",
+    period: "2026",
+    points: [
+      "Explored and modified UI layout components in QGroundControl, a cross-platform ground control application.",
+      "Adjusted interface elements to better understand Qt/QML structure and cross-platform UI behavior.",
+    ],
+  },
+  {
     role: "Independent Game Developer",
     org: "Roblox Platform",
     period: "2023 - Present",
