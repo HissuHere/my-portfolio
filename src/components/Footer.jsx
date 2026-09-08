@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {PERSON.name}
         </p>
         <p className="font-mono text-xs text-ink/40 dark:text-ink-light/40">
-          built with React · Tailwind · Three.js
+          built with React · Tailwind CSS · Vite
         </p>
       </div>
     </footer>
